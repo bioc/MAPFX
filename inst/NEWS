@@ -16,7 +16,10 @@ Changes in version 0.99.7 (2024-04-29), and 0.99.8 (2024-04-30)
     * Fixed issues on WinOS to pass.
     * Updated the README.md file.
 
-Changes in version 0.99.9 (2025-12-19)
+Changes in version 0.99.9 (2025-12-20)
 
     * Fixed issues related to deprecated functions (xgb.Booster.complete and xgb.parameters<-) in the xgboost package.
     * Updated the README.md file.
+
+Changes in version 1.7.1 (2025-12-20)
+    * Corrected the version number in the inst/NEWS file (0.99.9 to 1.7.1).
