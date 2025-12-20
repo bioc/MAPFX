@@ -16,7 +16,7 @@
 #'
 #' @importFrom glmnetUtils cv.glmnet
 #' @importFrom e1071 svm
-#' @importFrom xgboost xgboost xgb.Booster.complete xgb.parameters<-
+#' @importFrom xgboost xgboost xgb.model.parameters<-
 #' @importFrom stats lm predict as.formula contr.sum contrasts<- dexp dnorm median model.matrix optim pexp pnorm quantile sd setNames formula
 #' @importFrom utils getS3method head read.csv
 #' @importFrom parallel makeCluster clusterExport clusterEvalQ stopCluster
@@ -156,11 +156,22 @@ function(
     }
     if(is(x, "xgb.Booster")){
     requireNamespace("xgboost")
-    x <- xgboost::xgb.Booster.complete(x)
-    xgboost::xgb.parameters(x) <- list(nthread = 1)
+    # Below works in older xgboost versions like 1.7.7.1   
+    # x <- xgboost::xgb.Booster.complete(x) 
+    # >> ensured that a Booster object was “complete” and ready for use after partial construction
+    # >> modern xgboost (≥1.8 / 3.x) always returns a fully initialized Booster object from xgboost() or xgb.train().
+    # xgboost::xgb.parameters(x) <- list(nthread = 1)
+    # above effectively:
+    # ensured the Booster wasn’t half-built
+    # patched parameters into an existing object
+    # prevented crashes on some systems
+    
+    # New xgboost (≥3.x)
+    xgb.model.parameters(x) <- list(nthread = 1)
     }
     if(is(x, "svm")){
     requireNamespace("e1071")
+    #don't need to specify model here because fitting procedure would save it
     }
     res <- predict(x, xp)
     }

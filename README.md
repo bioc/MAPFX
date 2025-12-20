@@ -1,6 +1,6 @@
 # MAPFX: MAssively Parallel Flow cytometry Xplorer
 ### Author: Hsiao-Chi Liao
-### Date: 30 April 2024
+### Date: 19 December 2025
 <br>
 
 # Introduction
@@ -255,19 +255,19 @@ Figures will be stored here, including **scatter plots** for comparing backgroun
 
 # THANK YOU
 
-Thanks for carrying out analyses with our `MAPFX` package. Please feel free to raise any issues and/or questions on our GitHub page and/or send them to Hsiao-Chi [hsiaochi.liao@student.unimelb.edu.au](mailto:hsiaochi.liao@student.unimelb.edu.au).
+Thanks for carrying out analyses with our `MAPFX` package. Please feel free to raise any issues and/or questions on our GitHub page and/or send them to Hsiao-Chi [chelsea.acad@gmail.com](mailto:chelsea.acad@gmail.com).
 
 ## Information about the R session when this vignette was built
 
 ``` r
 sessionInfo()
-## R Under development (unstable) (2024-03-18 r86148)
-## Platform: aarch64-apple-darwin20
-## Running under: macOS Sonoma 14.4
+## R Under development (unstable) (2024-03-12 r86109)
+## Platform: x86_64-apple-darwin20
+## Running under: macOS Ventura 13.6.3
 ## 
 ## Matrix products: default
-## BLAS:   /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRblas.0.dylib 
-## LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
+## BLAS:   /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/lib/libRblas.0.dylib 
+## LAPACK: /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0
 ## 
 ## Random number generation:
 ##  RNG:     L'Ecuyer-CMRG 
@@ -275,9 +275,9 @@ sessionInfo()
 ##  Sample:  Rejection 
 ##  
 ## locale:
-## [1] C/en_AU.UTF-8/en_AU.UTF-8/C/en_AU.UTF-8/en_AU.UTF-8
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
 ## 
-## time zone: Australia/Melbourne
+## time zone: Australia/Adelaide
 ## tzcode source: internal
 ## 
 ## attached base packages:
@@ -286,53 +286,53 @@ sessionInfo()
 ## 
 ## other attached packages:
 ##  [1] cowplot_1.1.3         gtools_3.9.5          reshape2_1.4.4       
-##  [4] pbapply_1.7-2         doParallel_1.0.17     iterators_1.0.14     
-##  [7] foreach_1.5.2         xgboost_1.7.7.1       e1071_1.7-14         
-## [10] glmnetUtils_1.1.9     circlize_0.4.16       ComplexHeatmap_2.19.0
-## [13] ggrepel_0.9.5         Rfast_2.1.0           RcppParallel_5.1.7   
-## [16] RcppZiggurat_0.1.6    Rcpp_1.0.12           RColorBrewer_1.1-3   
-## [19] igraph_2.0.3          iCellR_1.6.7          plotly_4.10.4        
-## [22] ggplot2_3.5.0         uwot_0.1.16           Matrix_1.6-5         
-## [25] stringr_1.5.1         Biobase_2.63.0        BiocGenerics_0.49.1  
-## [28] flowCore_2.15.2       MAPFX_0.99.0          knitr_1.45           
-## [31] BiocStyle_2.31.0     
+##  [4] pbapply_1.7-2         xgboost_3.1.2.1       e1071_1.7-14         
+##  [7] glmnetUtils_1.1.9     circlize_0.4.16       ComplexHeatmap_2.19.0
+## [10] Rfast_2.1.0           RcppParallel_5.1.7    RcppZiggurat_0.1.6   
+## [13] Rcpp_1.0.12           RColorBrewer_1.1-3    igraph_2.0.3         
+## [16] iCellR_1.6.7          plotly_4.10.4         ggplot2_3.5.1        
+## [19] uwot_0.1.16           Matrix_1.6-5          stringr_1.5.1        
+## [22] Biobase_2.63.0        BiocGenerics_0.49.1   flowCore_2.15.3      
+## [25] MAPFX_0.99.9          knitr_1.45            BiocStyle_2.31.0     
 ## 
 ## loaded via a namespace (and not attached):
-##   [1] ggdendro_0.2.0       rstudioapi_0.16.0    jsonlite_1.8.8      
-##   [4] shape_1.4.6.1        magrittr_2.0.3       farver_2.1.1        
+##   [1] ggdendro_0.2.0       rstudioapi_0.15.0    jsonlite_1.8.8      
+##   [4] shape_1.4.6.1        magrittr_2.0.3       farver_2.1.2        
 ##   [7] rmarkdown_2.26       GlobalOptions_0.1.2  vctrs_0.6.5         
-##  [10] base64enc_0.1-3      rstatix_0.7.2        htmltools_0.5.8     
+##  [10] base64enc_0.1-3      rstatix_0.7.2        htmltools_0.5.7     
 ##  [13] progress_1.2.3       broom_1.0.5          Formula_1.2-5       
-##  [16] sass_0.4.9           bslib_0.7.0          htmlwidgets_1.6.4   
-##  [19] plyr_1.8.9           cachem_1.0.8         mime_0.12           
-##  [22] lifecycle_1.0.4      pkgconfig_2.0.3      R6_2.5.1            
-##  [25] fastmap_1.1.1        shiny_1.8.1          clue_0.3-65         
-##  [28] digest_0.6.35        reshape_0.8.9        colorspace_2.1-0    
-##  [31] S4Vectors_0.41.3     irlba_2.3.5.1        Hmisc_5.1-2         
-##  [34] ggpubr_0.6.0         labeling_0.4.3       cytolib_2.15.2      
-##  [37] fansi_1.0.6          httr_1.4.7           abind_1.4-5         
-##  [40] compiler_4.4.0       proxy_0.4-27         withr_3.0.0         
-##  [43] bit64_4.0.5          htmlTable_2.4.2      backports_1.4.1     
-##  [46] carData_3.0-5        ggsignif_0.6.4       MASS_7.3-60.2       
-##  [49] rjson_0.2.21         scatterplot3d_0.3-44 tools_4.4.0         
-##  [52] foreign_0.8-86       ape_5.7-1            httpuv_1.6.15       
-##  [55] nnet_7.3-19          glue_1.7.0           nlme_3.1-164        
-##  [58] promises_1.2.1       checkmate_2.3.1      Rtsne_0.17          
-##  [61] cluster_2.1.6        generics_0.1.3       hdf5r_1.3.10        
-##  [64] gtable_0.3.4         class_7.3-22         tidyr_1.3.1         
-##  [67] data.table_1.15.2    hms_1.1.3            car_3.1-2           
-##  [70] utf8_1.2.4           RcppAnnoy_0.0.22     RANN_2.6.1          
-##  [73] pillar_1.9.0         later_1.3.2          splines_4.4.0       
-##  [76] dplyr_1.1.4          lattice_0.22-6       FNN_1.1.4           
-##  [79] survival_3.5-8       bit_4.0.5            RProtoBufLib_2.15.0 
-##  [82] tidyselect_1.2.1     gridExtra_2.3        bookdown_0.38       
-##  [85] IRanges_2.37.1       stats4_4.4.0         xfun_0.43           
-##  [88] matrixStats_1.2.0    pheatmap_1.0.12      stringi_1.8.3       
-##  [91] lazyeval_0.2.2       yaml_2.3.8           evaluate_0.23       
-##  [94] codetools_0.2-19     NbClust_3.0.1        tibble_3.2.1        
-##  [97] BiocManager_1.30.22  cli_3.6.2            rpart_4.1.23        
-## [100] xtable_1.8-4         munsell_0.5.0        jquerylib_0.1.4     
-## [103] png_0.1-8            prettyunits_1.2.0    glmnet_4.1-8        
-## [106] viridisLite_0.4.2    scales_1.3.0         purrr_1.0.2         
-## [109] crayon_1.5.2         GetoptLong_1.0.5     rlang_1.1.3
+##  [16] sass_0.4.9           bslib_0.6.1          htmlwidgets_1.6.4   
+##  [19] plyr_1.8.9           cachem_1.1.0         mime_0.12           
+##  [22] lifecycle_1.0.4      iterators_1.0.14     pkgconfig_2.0.3     
+##  [25] R6_2.5.1             fastmap_1.2.0        shiny_1.8.0         
+##  [28] clue_0.3-65          digest_0.6.35        reshape_0.8.9       
+##  [31] colorspace_2.1-0     S4Vectors_0.41.4     irlba_2.3.5.1       
+##  [34] Hmisc_5.1-2          ggpubr_0.6.0         labeling_0.4.3      
+##  [37] cytolib_2.15.2       fansi_1.0.6          httr_1.4.7          
+##  [40] abind_1.4-5          compiler_4.4.0       proxy_0.4-27        
+##  [43] withr_3.0.0          bit64_4.0.5          doParallel_1.0.17   
+##  [46] htmlTable_2.4.2      backports_1.4.1      carData_3.0-5       
+##  [49] ggsignif_0.6.4       MASS_7.3-60.2        rjson_0.2.21        
+##  [52] scatterplot3d_0.3-44 tools_4.4.0          foreign_0.8-86      
+##  [55] ape_5.8              httpuv_1.6.14        nnet_7.3-19         
+##  [58] glue_1.7.0           nlme_3.1-164         promises_1.2.1      
+##  [61] checkmate_2.3.1      Rtsne_0.17           cluster_2.1.6       
+##  [64] generics_0.1.3       hdf5r_1.3.10         gtable_0.3.5        
+##  [67] class_7.3-22         tidyr_1.3.1          data.table_1.15.2   
+##  [70] hms_1.1.3            car_3.1-2            utf8_1.2.4          
+##  [73] RcppAnnoy_0.0.22     ggrepel_0.9.5        RANN_2.6.1          
+##  [76] foreach_1.5.2        pillar_1.9.0         later_1.3.2         
+##  [79] splines_4.4.0        dplyr_1.1.4          lattice_0.22-5      
+##  [82] FNN_1.1.4            survival_3.5-8       bit_4.0.5           
+##  [85] RProtoBufLib_2.15.1  tidyselect_1.2.1     gridExtra_2.3       
+##  [88] bookdown_0.38        IRanges_2.37.1       stats4_4.4.0        
+##  [91] xfun_0.42            matrixStats_1.3.0    pheatmap_1.0.12     
+##  [94] stringi_1.8.4        lazyeval_0.2.2       yaml_2.3.8          
+##  [97] evaluate_0.23        codetools_0.2-19     NbClust_3.0.1       
+## [100] tibble_3.2.1         BiocManager_1.30.22  cli_3.6.2           
+## [103] rpart_4.1.23         xtable_1.8-4         munsell_0.5.1       
+## [106] jquerylib_0.1.4      png_0.1-8            ellipsis_0.3.2      
+## [109] prettyunits_1.2.0    glmnet_4.1-8         viridisLite_0.4.2   
+## [112] scales_1.3.0         purrr_1.0.2          crayon_1.5.2        
+## [115] GetoptLong_1.0.5     rlang_1.1.4
 ```
