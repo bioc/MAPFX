@@ -19,3 +19,7 @@ Changes in version 0.99.7 (2024-04-29), and 0.99.8 (2024-04-30)
 Changes in version 1.6.1 (2026-01-07)
 
     * Backported fixes from devel to resolve MAPFX import and XGB v3 issues
+
+Changes in version 1.6.2 (2026-01-25)
+
+    * Backported fixes from devel to resolve MAPFX import and XGB v3 issues (same changes as in GitHub)
