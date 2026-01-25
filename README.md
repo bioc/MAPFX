@@ -293,7 +293,7 @@ sessionInfo()
 ## [16] iCellR_1.6.7          plotly_4.10.4         ggplot2_3.5.1        
 ## [19] uwot_0.1.16           Matrix_1.6-5          stringr_1.5.1        
 ## [22] Biobase_2.63.0        BiocGenerics_0.49.1   flowCore_2.15.3      
-## [25] MAPFX_0.99.9          knitr_1.45            BiocStyle_2.31.0     
+## [25] MAPFX_1.6.3          knitr_1.45            BiocStyle_2.31.0     
 ## 
 ## loaded via a namespace (and not attached):
 ##   [1] ggdendro_0.2.0       rstudioapi_0.15.0    jsonlite_1.8.8      

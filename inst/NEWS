@@ -20,6 +20,6 @@ Changes in version 1.6.1 (2026-01-07)
 
     * Backported fixes from devel to resolve MAPFX import and XGB v3 issues
 
-Changes in version 1.6.2 (2026-01-25)
+Changes in version 1.6.2 and 1.6.3 (2026-01-25)
 
-    * Backported fixes from devel to resolve MAPFX import and XGB v3 issues (same changes as in GitHub)
+    * Updated DESCRIPTION and xgboost changes synced with the devel branch
